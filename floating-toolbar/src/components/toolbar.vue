@@ -12,25 +12,33 @@ async function openCmd(fN) {
   await invoke("run_cmd_file", { fileFullName: fN });
 }
 
-async function loadRiConfig() {
-  const fileContent = await invoke('read_json_file', { fileName: "D:\\Code\\floating-toolbar\\floating-toolbar\\ri-config.json" });
-  jsonData.value = JSON.parse(fileContent);
-  console.log(jsonData.value[0].img)
-}
+// async function loadRiConfig() {
+//   const fileContent = await invoke('read_json_file', { fileName: "D:\\Code\\floating-toolbar\\floating-toolbar\\ri-config.json" });
+//   jsonData.value = JSON.parse(fileContent);
+//   console.log(jsonData.value[0].img)
+// }
 
-loadRiConfig()
+// loadRiConfig()
 
 </script>
 
 <template>
 <div class="d-inline-flex bd-highlight rounded-5 ms-3 py-0 px-2 bg-black bg-opacity-25" data-tauri-drag-region>
             <div class="square-container mx-1 my-1">
-                <img class="square-container" src="./img/Steam_icon_logo.svg.png"  
-                  v-on:click="openFile('C:\\Program Files (x86)\\Steam\\Steam.exe')"
+                <img class="square-container" src="./img/karina-icon.jpg"  
+                  v-on:click="openFile('C:\\Program Files (x86)\\Steam\\Steam.exe')" data-toggle="tooltip" title="這是提示框的內容！"
                   >
             </div>
             <div class="square-container mx-1 my-1">
-                <img class="square-container" src="./img/32954.png" alt=""
+                <img class="square-container" src="./img/winter-icon.jpg" alt=""
+                  v-on:click="openCmd('D:\\Code\\floating-toolbar\\fff.cmd')">
+            </div>
+            <div class="square-container mx-1 my-1">
+                <img class="square-container" src="./img/giselle-icon.jpg" alt=""
+                  v-on:click="openCmd('D:\\Code\\floating-toolbar\\fff.cmd')">
+            </div>
+            <div class="square-container mx-1 my-1">
+                <img class="square-container" src="./img/ningning-icon.jpg" alt=""
                   v-on:click="openCmd('D:\\Code\\floating-toolbar\\fff.cmd')">
             </div>
         </div>
