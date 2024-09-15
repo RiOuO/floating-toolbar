@@ -3,6 +3,7 @@ use std::process::Command;
 use std::path::PathBuf;
 use tauri::api::path::document_dir;
 use std::fs;
+use tauri::{Manager, WindowEvent};
 
 #[tauri::command]
 fn open_external_app(fileFullName:String) {
@@ -40,6 +41,12 @@ fn resize_window(window: tauri::Window, width: f64, height: f64) {
 
 fn main() {
     tauri::Builder::default()
+    .on_window_event(|event| {
+        if let WindowEvent::Resized(size) = event.event() {
+            let window = event.window();
+            window.unmaximize().unwrap();
+        }
+    })
         .invoke_handler(tauri::generate_handler![open_external_app,run_cmd_file,read_json_file,resize_window])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

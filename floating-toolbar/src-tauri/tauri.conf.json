@@ -12,14 +12,14 @@
   "tauri": {
     "allowlist": {
       "window": {
-        "all": true,
+        "all": false,
         "close": true,
         "hide": true,
         "show": true,
-        "maximize": true,
-        "minimize": true,
-        "unmaximize": true,
-        "unminimize": true,
+        "maximize": false,
+        "minimize": false,
+        "unmaximize": false,
+        "unminimize": false,
         "startDragging": true
       },
       "all": true,
@@ -36,6 +36,8 @@
         "title": "floating-toolbar",
         "width": 230,
         "height": 55,
+        "fullscreen": false,
+        "maximizable": false,
         "transparent": true,
         "decorations": false,
         "alwaysOnTop": true,
