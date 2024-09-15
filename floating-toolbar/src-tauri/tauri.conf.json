@@ -34,8 +34,8 @@
     "windows": [
       {
         "title": "floating-toolbar",
-        "width": 170,
-        "height": 80,
+        "width": 230,
+        "height": 55,
         "transparent": true,
         "decorations": false,
         "alwaysOnTop": true,

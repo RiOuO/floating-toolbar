@@ -33,9 +33,14 @@ fn read_json_file(fileName: String) -> Result<String, String> {
     fs::read_to_string(file_path).map_err(|err| err.to_string())
 }
 
+#[tauri::command]
+fn resize_window(window: tauri::Window, width: f64, height: f64) {
+    window.set_size(tauri::LogicalSize { width, height }).unwrap();
+}
+
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![open_external_app,run_cmd_file,read_json_file])
+        .invoke_handler(tauri::generate_handler![open_external_app,run_cmd_file,read_json_file,resize_window])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

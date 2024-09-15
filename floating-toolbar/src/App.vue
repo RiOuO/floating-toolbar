@@ -14,6 +14,14 @@ document
 </template>
 
 <style scoped>
+html, body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
 .logo.vite:hover {
   filter: drop-shadow(0 0 2em #747bff);
 }

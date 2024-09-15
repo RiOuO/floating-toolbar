@@ -1,10 +1,26 @@
 [
     {
         "path": "C:\\Program Files (x86)\\Steam\\Steam.exe",
-        "img": "Steam_icon_logo.svg.png"
+        "img": "giselle-icon.jpg",
+        "fn": "exe",
+        "mes": "111"
     },
     {
-        "path": "C:\\Program Files (x86)\\Steam\\Steam.exe",
-        "img": "Steam_icon_logo.svg.png"
+        "path": "D:\\Code\\floating-toolbar\\fff.cmd",
+        "img": "karina-icon.jpg",
+        "fn": "cmd",
+        "mes": "222"
+    },
+    {
+        "path": "D:\\Code\\floating-toolbar\\fff.cmd",
+        "img": "ningning-icon.jpg",
+        "fn": "cmd",
+        "mes": "333"
+    },
+    {
+        "path": "D:\\Code\\floating-toolbar\\fff.cmd",
+        "img": "winter-icon.jpg",
+        "fn": "cmd",
+        "mes": "444"
     }
 ]
